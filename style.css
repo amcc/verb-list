@@ -6,6 +6,7 @@ body {
 }
 canvas {
   display: block;
+  cursor: pointer;
 }
 #sketch-holder {
   position: relative;
@@ -31,8 +32,23 @@ canvas {
   padding: 2vw 0;
 }
 
+.help {
+  padding: 2vw;
+  margin-top: 4vw;
+  /* border-top: 1px solid rgba(177, 85, 40, 0.6); */
+  /* border-bottom: 1px solid rgba(177, 85, 40, 0.6); */
+}
 section {
   margin-top: 10vh;
   padding: 2vw;
   max-width: 1000px;
+}
+button {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-size: 1em;
+  background: #fff;
+  border: 0;
+  text-decoration: underline;
+  cursor: pointer;
 }

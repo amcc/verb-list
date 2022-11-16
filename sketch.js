@@ -15,11 +15,9 @@ let strokeOpacity = 0;
 let textElement = document.getElementById("current-verb");
 let canvasParent = document.getElementById("p5canvas");
 
-// select canvas parent div #p5canvas and add event listener
-canvasParent.addEventListener("click", clickHandler);
+let timer;
 
-// create repeating timer
-const timer = setInterval(animate, 5000);
+canvasParent.addEventListener("click", clickHandler);
 
 function preload() {
   img = loadImage("image/verbs.jpeg");
@@ -30,6 +28,15 @@ function setup() {
   canvas.parent("#p5canvas");
   setupValues();
   textFont("IBM Plex Mono");
+
+  autoTimer();
+}
+
+function autoTimer() {
+  clearInterval(timer);
+  animate();
+  timer = setInterval(animate, 5000);
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
 
 function setupValues() {
@@ -75,7 +82,9 @@ function getNewVerbIndex() {
 function clickHandler() {
   animate();
   clearInterval(timer);
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
+
 function animate() {
   getNewVerbIndex();
   textElement.innerHTML = verbs[n].verb;
