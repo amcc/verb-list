@@ -7,6 +7,9 @@ body {
 canvas {
   display: block;
 }
+#sketch-holder {
+  position: relative;
+}
 #verb-box {
   position: absolute;
   bottom: 0;
