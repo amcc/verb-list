@@ -16,7 +16,10 @@ let textElement = document.getElementById("current-verb");
 let canvasParent = document.getElementById("p5canvas");
 
 // select canvas parent div #p5canvas and add event listener
-canvasParent.addEventListener("click", clickClickClick);
+canvasParent.addEventListener("click", clickHandler);
+
+// create repeating timer
+const timer = setInterval(animate, 5000);
 
 function preload() {
   img = loadImage("image/verbs.jpeg");
@@ -69,7 +72,11 @@ function getNewVerbIndex() {
   }
 }
 
-function clickClickClick() {
+function clickHandler() {
+  animate();
+  clearInterval(timer);
+}
+function animate() {
   getNewVerbIndex();
   textElement.innerHTML = verbs[n].verb;
   strokeOpacity = 0;
