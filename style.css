@@ -44,6 +44,9 @@ section {
   max-width: 1000px;
 }
 button {
+  padding: 0;
+  margin: 0;
+  display: inline;
   font-family: "IBM Plex Mono", monospace;
   font-weight: 300;
   font-size: 1em;
@@ -51,4 +54,5 @@ button {
   border: 0;
   text-decoration: underline;
   cursor: pointer;
+  color: black;
 }
