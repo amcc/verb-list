@@ -57,7 +57,7 @@ function windowResized() {
 function draw() {
   background(255);
 
-  if (n >= 0) {
+  if (n != null) {
     x = lerp(x, (iw * verbs[n].x) / 100, speed);
     y = lerp(y, (ih * verbs[n].y) / 100, speed);
     image(img, -x + width / 20, -y + yAdd, iw, ih);
