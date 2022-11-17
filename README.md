@@ -1,6 +1,6 @@
 # verb-list
 <p>
-        Thiw website uses p5js to lerp between verb locations on Richard Serra's hand written artwork: Verb List. It does so accessibly modifying html to help artists and designers explore the possibilities of his actions.
+        This website uses p5js to lerp between verb locations on Richard Serra's hand written artwork: Verb List. It does so accessibly modifying html to help artists and designers explore the possibilities of his actions.
 </p>
 <h2>Richard Serra: Verb List, 1967</h2>
         <h3>actions to relate to oneself, material, place, and process</h3>
