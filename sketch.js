@@ -418,7 +418,7 @@ let verbs = [
     y: 39.5,
   },
   {
-    verb: "to hile",
+    verb: "to hide",
     x: 57.5,
     y: 42.6,
   },
