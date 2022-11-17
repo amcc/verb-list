@@ -1,5 +1,5 @@
 let img;
-let speed = 0.08;
+let lerpSpeed = 0.08;
 let n = null;
 let x = 0;
 let y = 0;
@@ -58,11 +58,11 @@ function draw() {
   background(255);
 
   if (n != null) {
-    x = lerp(x, (iw * verbs[n].x) / 100, speed);
-    y = lerp(y, (ih * verbs[n].y) / 100, speed);
+    x = lerp(x, (iw * verbs[n].x) / 100, lerpSpeed);
+    y = lerp(y, (ih * verbs[n].y) / 100, lerpSpeed);
     image(img, -x + width / 20, -y + yAdd, iw, ih);
 
-    strokeOpacity = lerp(strokeOpacity, 100, speed / 8);
+    strokeOpacity = lerp(strokeOpacity, 100, lerpSpeed / 8);
     stroke(177, 85, 40, strokeOpacity);
     strokeWeight(height / 200);
     line(0, yAdd - tweak, width, yAdd - tweak);
